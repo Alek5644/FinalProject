@@ -1,0 +1,97 @@
+﻿<Window x:Class="WpfApp4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="465" Width="684">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="317*"/>
+            <ColumnDefinition Width="382*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Name="LoginScreen" Visibility="Visible" Margin="0,0,0,10" Grid.ColumnSpan="2">
+            <Image HorizontalAlignment="Left" Height="428" VerticalAlignment="Top" Width="683" Source="Frame 1.png"/>
+            <PasswordBox Name="passwordbox" HorizontalAlignment="Left" Margin="245,326,0,0" VerticalAlignment="Top" Width="194" Height="34" FontSize="20"/>
+            <TextBox Name="UsernameBox" HorizontalAlignment="Left" Height="35" Margin="245,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" FontSize="20"/>
+            <Button Content="Enter" HorizontalAlignment="Left" Height="29" Margin="222,397,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click"/>
+            <Button Content="Sign up" HorizontalAlignment="Left" Height="29" Margin="346,397,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click2"/>
+        </Grid>
+        <Grid Name="SignupScreen" Visibility="Hidden" Grid.ColumnSpan="2">
+            <Image HorizontalAlignment="Left" Height="428" VerticalAlignment="Top" Width="683" Source="Frame 1.png"/>
+            <PasswordBox Name="passwordbox2"  HorizontalAlignment="Left" Margin="245,326,0,0" VerticalAlignment="Top" Width="194" Height="34" FontSize="20"/>
+            <TextBox Name="UsernameBox2" HorizontalAlignment="Left" Height="35" Margin="245,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="194" FontSize="20"/>
+            <Button Content="Enter" HorizontalAlignment="Left" Height="29" Margin="222,397,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click3"/>
+            <Button Content="Log in" HorizontalAlignment="Left" Height="29" Margin="346,397,0,0" VerticalAlignment="Top" Width="99" Click="Button_Click4"/>
+
+        </Grid>
+        <Grid Name="Unis" Visibility="Hidden" Grid.ColumnSpan="2">
+            <Grid Name="Info" Visibility="Visible" Margin="0,0,10,10">
+                <Image HorizontalAlignment="Center" Height="483" VerticalAlignment="Center" Width="733" Source="Frame 2.png" />
+                <TextBlock HorizontalAlignment="Left" Margin="123,62,0,0" TextWrapping="Wrap" Text="Cornell" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Center" Margin="0,65,0,0" TextWrapping="Wrap" Text="Harvard" VerticalAlignment="Top"/>
+                <TextBlock HorizontalAlignment="Left" Margin="506,62,0,0" TextWrapping="Wrap" Text="Yale" VerticalAlignment="Top"/>
+                <Button Content="Student &#xD;&#xA;Information" HorizontalAlignment="Left" Height="59" Margin="113,332,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_5"/>
+                <Button Content="Student&#xD;&#xA;Information" HorizontalAlignment="Center" Height="59" Margin="0,332,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click_6"/>
+                <Button Content="Student&#xD;&#xA;Information" HorizontalAlignment="Left" Height="59" Margin="484,332,0,0" VerticalAlignment="Top" Width="93" Click="Button_Click_7"/>
+                <Image Margin="60,123,451,162" Source="/Image1.png" Stretch="Fill"/>
+                <Image Margin="254,123,254,162" Source="/Image2.png" Stretch="Fill"/>
+                <Image Margin="439,123,74,162" Source="/Image3.png" Stretch="Fill"/>
+
+            </Grid>
+            <Grid Name="Cornell" Visibility="Hidden">
+                <Image HorizontalAlignment="Left" Height="428" VerticalAlignment="Top" Width="683" Source="Frame 2.png" />
+                <TextBox Name="CreateRoomText" HorizontalAlignment="Left" Height="32" Margin="130,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy" HorizontalAlignment="Left" Height="32" Margin="211,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy1" HorizontalAlignment="Left" Height="32" Margin="292,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy2" HorizontalAlignment="Left" Height="32" Margin="510,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy3" HorizontalAlignment="Left" Height="32" Margin="49,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <DataGrid x:Name="CornellStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="49,63,168,185" SelectionChanged="DataGrid_SelectionChanged"/>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="65,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"><Run FontWeight="Bold" Text="Cornell"/></TextBlock>
+                <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="548,73,0,0" VerticalAlignment="Top" Width="67" Click="Button_Click_1"/>
+                <Button Content="Add" HorizontalAlignment="Left" Height="33" Margin="102,345,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_2"/>
+                <Button Content="Update" HorizontalAlignment="Left" Height="33" Margin="211,345,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_3"/>
+                <Button Content="Delete" HorizontalAlignment="Left" Height="33" Margin="510,335,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_4"/>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="49,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="533"><Run FontWeight="Bold" Text="Student ID       Name              Sex                  Average grade                                          Student ID"/></TextBlock>
+
+            </Grid>
+            <Grid Name="Harvard" Visibility="Hidden">
+                <Image HorizontalAlignment="Left" Height="428" VerticalAlignment="Top" Width="683" Source="Frame 2.png" />
+                <TextBox Name="CreateRoomText1" HorizontalAlignment="Left" Height="32" Margin="130,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy4" HorizontalAlignment="Left" Height="32" Margin="211,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy5" HorizontalAlignment="Left" Height="32" Margin="292,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy6" HorizontalAlignment="Left" Height="32" Margin="510,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy7" HorizontalAlignment="Left" Height="32" Margin="49,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="548,73,0,0" VerticalAlignment="Top" Width="67" Click="Button_Click_1"/>
+                <Button Content="Add" HorizontalAlignment="Left" Height="33" Margin="102,345,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_2"/>
+                <Button Content="Update" HorizontalAlignment="Left" Height="33" Margin="211,345,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_3"/>
+                <Button Content="Delete" HorizontalAlignment="Left" Height="33" Margin="510,335,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_4"/>
+                <DataGrid x:Name="HarvardStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="49,63,168,185" SelectionChanged="DataGrid_SelectionChanged"/>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="65,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"><Run FontWeight="Bold" Text="Harvard"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="49,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="533"><Run FontWeight="Bold" Text="Student ID       Name              Sex                  Average grade                                          Student ID"/></TextBlock>
+
+            </Grid>
+            <Grid Name="Yale" Visibility="Hidden">
+                <Image HorizontalAlignment="Left" Height="428" VerticalAlignment="Top" Width="683" Source="Frame 2.png" />
+                <TextBox Name="CreateRoomText2" HorizontalAlignment="Left" Height="32" Margin="130,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy8" HorizontalAlignment="Left" Height="32" Margin="211,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy9" HorizontalAlignment="Left" Height="32" Margin="292,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy10" HorizontalAlignment="Left" Height="32" Margin="510,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <TextBox x:Name="CreateRoomText_Copy11" HorizontalAlignment="Left" Height="32" Margin="49,298,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="76"/>
+                <DataGrid x:Name="YaleStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="49,63,168,185" SelectionChanged="DataGrid_SelectionChanged"/>
+                <Button Content="Back" HorizontalAlignment="Left" Height="31" Margin="548,73,0,0" VerticalAlignment="Top" Width="67" Click="Button_Click_1"/>
+                <Button Content="Add" HorizontalAlignment="Left" Height="33" Margin="102,345,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_2"/>
+                <Button Content="Update" HorizontalAlignment="Left" Height="33" Margin="211,345,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_3"/>
+                <Button Content="Delete" HorizontalAlignment="Left" Height="33" Margin="510,335,0,0" VerticalAlignment="Top" Width="78" Click="Button_Click_4"/>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="49,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="533"><Run FontWeight="Bold" Text="Student ID       Name              Sex                  Average grade                                          Student ID"/></TextBlock>
+                <TextBlock HorizontalAlignment="Left" Height="19" Margin="65,39,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="85"><Run FontWeight="Bold" Text="Yale"/></TextBlock>
+
+            </Grid>
+        </Grid>
+
+
+
+
+    </Grid>
+</Window>
